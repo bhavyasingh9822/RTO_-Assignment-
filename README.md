@@ -39,27 +39,30 @@ cd RTO_-Assignment
 Create a database named RTO_db:
 
 sql
-CREATE DATABASE RTO_db;
+``CREATE DATABASE RTO_db;``
 
-
+``
 Update src/main/resources/application.properties:
+``
 
 properties
+``
 spring.datasource.url=jdbc:mysql://localhost:3306/RTO_db
 spring.datasource.username=your_mysql_username
 spring.datasource.password=your_mysql_password
-
+``
+``
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
-
-
+``
+``
 ### 3. Run the Application
 
 Using Maven:
 
-bash
+bash``
 mvn spring-boot:run
-
+``
 
 ---
 
@@ -68,7 +71,7 @@ mvn spring-boot:run
 ### ➕ Add Vehicle
 
 POST /api/add/vehicle
-
+``
 json
 {
   "name": "Hyundai Creta",
@@ -79,31 +82,31 @@ json
   "city": "Patna",
   "state": "Bihar"
 }
-
+``
 
 ### 📋 Get All Vehicles (Paginated)
 
-GET /api/vehicles?page=0&size=10
+``GET /api/vehicles?page=0&size=10``
 
 ### 🔍 Get Vehicle by ID
 
-GET /api/vehicle/{id}
+``GET /api/vehicle/{id}``
 
 ### ✏ Update Vehicle
 
-PUT /api/vehicle/{id}
-
+``PUT /api/vehicle/{id}``
+``
 json
 {
   "name": "Hyundai Creta",
   "fuel_type": "Diesel",
   "registration_no": "BR 01 AW 0145"
-}
+}``
 
 
 ### ❌ Delete Vehicle
 
-DELETE /api/vehicle/{id}
+``DELETE /api/vehicle/{id}``
 
 ### 🔍 Search Vehicles
 
