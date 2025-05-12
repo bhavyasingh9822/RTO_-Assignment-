@@ -27,11 +27,12 @@ A Spring Boot RESTful API for managing vehicle data in an RTO (Regional Transpor
 ## 🔧 Setup Instructions
 
 ### 1. Clone the Repository
-
+``
 bash
 git clone https://github.com/bhavyasingh9822/RTO_-Assignment.git
 cd RTO_-Assignment
 `
+``
 
 ### 2. Configure MySQL Database
 
