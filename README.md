@@ -27,12 +27,12 @@ A Spring Boot RESTful API for managing vehicle data in an RTO (Regional Transpor
 ## 🔧 Setup Instructions
 
 ### 1. Clone the Repository
-``
+```
 bash
 git clone https://github.com/bhavyasingh9822/RTO_-Assignment.git
 cd RTO_-Assignment
 `
-``
+```
 
 ### 2. Configure MySQL Database
 
@@ -41,21 +41,21 @@ Create a database named RTO_db:
 sql
 ``CREATE DATABASE RTO_db;``
 
-``
+```
 Update src/main/resources/application.properties:
-``
+```
 
 properties
-``
+```
 spring.datasource.url=jdbc:mysql://localhost:3306/RTO_db
 spring.datasource.username=your_mysql_username
 spring.datasource.password=your_mysql_password
-``
-``
+```
+```
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
-``
-``
+```
+
 ### 3. Run the Application
 
 Using Maven:
@@ -70,8 +70,9 @@ mvn spring-boot:run
 
 ### ➕ Add Vehicle
 
-POST /api/add/vehicle
+POST ``/api/add/vehicle
 ``
+```
 json
 {
   "name": "Hyundai Creta",
@@ -82,7 +83,7 @@ json
   "city": "Patna",
   "state": "Bihar"
 }
-``
+```
 
 ### 📋 Get All Vehicles (Paginated)
 
@@ -95,13 +96,14 @@ json
 ### ✏ Update Vehicle
 
 ``PUT /api/vehicle/{id}``
-``
+```
 json
 {
   "name": "Hyundai Creta",
   "fuel_type": "Diesel",
   "registration_no": "BR 01 AW 0145"
-}``
+}
+```
 
 
 ### ❌ Delete Vehicle
